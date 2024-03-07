@@ -29,7 +29,6 @@ public class ClientController {
     public Client create(@RequestBody Client entity) {
         entity.setId(ObjectId.get().toString());
         return repository.save(entity);
-        //return new Client();
     }
 
 }

@@ -41,8 +41,8 @@ public class ClientControllerTests extends TddApplicationTests {
                         .content(asJsonString(new Client(null, "Neuber", "neuber.paiva@gmail.com", "9994545429", "440120165656")))
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
-                .andExpect(MockMvcResultMatchers.status().isOk());
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.id").exists());
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").exists());
     }
 
     public static String asJsonString(final Object obj) {
