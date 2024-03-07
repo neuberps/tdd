@@ -28,6 +28,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("junit:junit:4.13.2")
 }
 
 tasks.withType<Test> {
