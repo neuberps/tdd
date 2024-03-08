@@ -3,8 +3,8 @@ package com.ms.tdd.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ms.tdd.TddApplicationTests;
 import com.ms.tdd.model.Client;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
@@ -20,7 +20,7 @@ public class ClientControllerTests extends TddApplicationTests {
     @Autowired
     private ClientController controller;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         this.mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
     }
