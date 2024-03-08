@@ -18,12 +18,6 @@ public class ClientController {
     @GetMapping
     public List<Client> list() {
         return repository.findAll();
-        /*
-        return Arrays.asList(Client.builder().
-                name("Neuber")
-                .email("neuber.paiva@gmail.com")
-                .cel("9994545429").build());
-        */
     }
 
     @PostMapping
