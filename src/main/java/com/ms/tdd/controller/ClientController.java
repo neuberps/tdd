@@ -6,7 +6,6 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -18,11 +17,13 @@ public class ClientController {
 
     @GetMapping
     public List<Client> list() {
-        //return clientRepository.findAll();
+        return repository.findAll();
+        /*
         return Arrays.asList(Client.builder().
                 name("Neuber")
                 .email("neuber.paiva@gmail.com")
                 .cel("9994545429").build());
+        */
     }
 
     @PostMapping
